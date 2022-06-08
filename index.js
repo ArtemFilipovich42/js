@@ -1,52 +1,21 @@
-var name1 = prompt('enter the text!');
-var cifr = name1.length;
-var i = 0;
-var sumA;
-var sumB;
-var sumE;
-var sumO;
-function aAll(sumA) {
-    for (i = 0; i <= cifr; i++) {
-        var a = name1[i]
-        if (a === 'a') {
-            sumA++
-        }
+var array = [1, 2, 3, 4, [5, 6, [7, 8, 9]]]
 
-    }
-    return (console.log(sumA))
-}
-function bAll(sumB) {
-    for (i = 0; i <= cifr; i++) {
-        var b = name1[i]
-        if (b === 'b') {
-            sumB++
-        }
-
-    }
-    return (console.log(sumB))
-}
-
-function oAll(sumO) {
-    for (i = 0; i <= cifr; i++) {
-        var o = name1[i]
-        if (o === 'o') {
-            sumO++
+for (var i = 0; i < array.length; i++) {
+    if (typeof (array[i]) === "number") { alert(array[i]) }
+    else if (typeof (array[i]) === "object") {
+        {
+            for (var j = 0; j < 3; j++)
+                if (typeof (array[i][j]) === "number") {
+                    alert(array[i][j])
+                }
+                else if (typeof (array[i][j]) === "object") {
+                    {
+                        for (var k = 0; k < 4; k++)
+                            if (typeof (array[i][j][k]) === "number") {
+                                alert(array[i][j][k])
+                            }
+                    }
+                }
         }
     }
-    return (console.log(sumO))
-}
-function eAll(sumE) {
-    for (i = 0; i <= cifr; i++) {
-        var e = name1[i]
-        if (e === 'e') {
-            sumE++
-        }
-
-    }
-    return (console.log(sumA))
-}
-
-
-
-
-
+} 
