@@ -1,21 +1,12 @@
-var array = [1, 2, 3, 4, [5, 6, [7, 8, 9]]]
+var obj = {
+    name: 'vasya',
+    age: 20,
+    isFlay: false,
+    inObject: { show: 'text' },
+    inArray: [1, 2, 3, [45, 50]]
+}
 
-for (var i = 0; i < array.length; i++) {
-    if (typeof (array[i]) === "number") { alert(array[i]) }
-    else if (typeof (array[i]) === "object") {
-        {
-            for (var j = 0; j < 3; j++)
-                if (typeof (array[i][j]) === "number") {
-                    alert(array[i][j])
-                }
-                else if (typeof (array[i][j]) === "object") {
-                    {
-                        for (var k = 0; k < 4; k++)
-                            if (typeof (array[i][j][k]) === "number") {
-                                alert(array[i][j][k])
-                            }
-                    }
-                }
-        }
-    }
-} 
+for (var key in obj) {
+    if (typeof (key) === 'string') { console.log(obj[key]) }
+    else if (typeof (key) === 'object') { for (var inkey in key)
+        {console.log(obj[key][inkey])}} }
