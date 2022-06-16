@@ -1,12 +1,22 @@
 var obj = {
-    name: 'vasya',
-    age: 20,
-    isFlay: false,
-    inObject: { show: 'text' },
-    inArray: [1, 2, 3, [45, 50]]
+    name: 'Tasck',
+    id: 1,
+    Boolean: false,
+    empty: undefined,
+    count: null,
+    listTasck: [1, 2, 3, 4],
+    info: {
+        coorect: null,
+        listinfo: [null, { id: 2 }]
+    }
 }
 
+var objJ = {}
+
 for (var key in obj) {
-    if (typeof (key) === 'string') { console.log(obj[key]) }
-    else if (typeof (key) === 'object') { for (var inkey in key)
-        {console.log(obj[key][inkey])}} }
+    if (typeof (obj[key]) !== "object" || obj[key] === null) { objJ[key] = obj[key] }
+    else if (typeof(obj[key]) === "object" && obj[key] !== {}) {
+         for (var i = 0; i < this.key.length; i++)
+        {objJ[key] = obj[key] }
+
+}}
